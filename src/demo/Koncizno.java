@@ -44,7 +44,7 @@ public class Koncizno {
             }
         }
 
-        System.out.println(imena);
+        System.out.println("Imperativan nacin: " + imena);
 
         /* Napomena:
          * - Primetite kako tok misli stalno skakuce izmedju zadatka i alatki kojim razmatramo da ga resimo.
@@ -67,7 +67,6 @@ public class Koncizno {
          * Slobodno izmenite kod iznad i isprobajte vasa resenja. Obratite paznju sta ste sve promenili i dok ste
          * menjali na sta ste sve morali da obratite paznju.
         /**/
-
 
 
         // ========
@@ -113,9 +112,13 @@ public class Koncizno {
                 .map(String::toUpperCase)
                 .collect(toList());
 
-        System.out.println(imena3);
+        System.out.println("Funkcionalan nacin: " + imena3);
 
-        System.out.println("imena == imena2 == imena3? " + (imena.equals(imena2) && imena2.equals(imena3)));
+        System.out.println(
+            "Sve tri liste imena su jednake (imena == imena2 == imena3)? "
+                + (imena.equals(imena2) && imena2.equals(imena3))
+        );
+        System.out.println("--");
 
         /* Napomena:
          * - Primetite daleko prirodniju tranzicju od zamisli do konkretnog resenja.
@@ -137,7 +140,8 @@ public class Koncizno {
          *
          * - Koriscenje streamova je vremenski efikasnije:
          * -- iz ugla koda:
-         * --- zbog lenjog izvrsavanja
+         * --- zbog lenjog izvrsavanja (npr. da nema terminalne naredbe `collect` na linijama 102 i 113,
+         *     stream se ne bi ni izvrsio!)
          * --- kolicine optimizacija koje samo postaju bolje iz verzije u verziju
          * -- iz ugla razvoja:
          * --- kod je pregledniji, samim tim laksi za odrzavanje i nastavak razvoja

@@ -1,3 +1,4 @@
+import demo.FilterMapDemo;
 import demo.Koncizno;
 import demo.helpers.Osoba;
 import demo.helpers.Pol;
@@ -19,10 +20,69 @@ public class Main {
         );
     }
 
+    /*
+     * Cao, dobrodosao u Stream API prakticni tutorial. :)
+     * Sve pocinje odavde, tako da obrati paznju.
+     *
+     * TODO dodati uputstva
+     */
     public static void main(String[] args) {
         List<Osoba> osobe = stvoriOsobe();
 
-        //Uvod - pocni odavde
+        // Uvod - pocni odavde
         Koncizno.run(osobe);
+
+        /* Da rezimiramo:
+         * - Stream je apstrakcija
+         * - Stream nije mutabilan
+         * -- znaci, izvorna kolekcija se NE menja kao posledica stream operacija
+         * -- a, funkcije obrade su ciste funkcije (bez sporednih efekata)
+         * --- tj. nemaju stanje i menjaju iskljucivo podatke koje su im prosledjene
+         * - Dakle, Stream je vise nego ista jasan pregled transformacija ulaznih podataka
+         * - Radimo sa Streamom putem method-chaininga (lancanje naredbi)
+         * -- dok Stream ispod haube koristi komponavanje funkcija kako bi sve obrade uradio u samo jednom prolazu
+         * - Stream je lenj! Ne radi nista bez terminalne operacije.
+        /**/
+
+        /* Koristimo stream tako sto:
+         * - se uzdignemo na visi nivo apstrakcije (sa konkretne kolekcije predjemo na stream)
+         * - jasemo stream (i to sto duze, kompunujuci, redjajuci operacije)
+         * - slecemo nazad na konkretno (tako sto pozovemu jednu od terminalnih operacija)
+        /**/
+
+
+        // Glavna dva alata koji su nam na raspolaganju:
+        FilterMapDemo.run(osobe);
+
+        /* Da rezimiramo
+         * Glavna dva alata su filter i stream
+         * - Filter opciono menja broj elemenata iskljucivo na manje a u zavisnosti od uslova,
+         *   ali tip podataka ostaje isti
+         * - Map transformise elemente cime opciono i njihov tip a u zavisnosti od prosledjene funkcije,
+         *   ali broj elemenata ostaje isti
+        /**/
+
+        // Glavna nardeba za racunanje statistike:
+//        ReduceDemo.run(osobe);
+
+        // Pogresno vs ispravno
+//        PogresnoIspravno.run(osobe);
+
+        // Sta je collect, sta moze, i kako se razlikuje od reduce
+//        CollectDemo.run(osobe);
+
+        // Sortiranje
+//        SortDemo.run(osobe);
+
+        // Beskonacni streamovi
+//        BeskrajnoDemo.run();
+
+
+        // pogledajte ceo Stream API na:
+        // https://docs.oracle.com/javase/9/docs/api/java/util/stream/Stream.html
+
+        // pogledajte sve vrste Streamova na:
+        // https://docs.oracle.com/javase/9/docs/api/java/util/stream/package-summary.html
+
     }
 }
