@@ -1,61 +1,48 @@
-Branko Bavrljic
-bbavrljic@gmail.com
-https://github.com/bbavrljic
+[![License: CC BY-NC-SA 4.0][cc-shields-logo]][licence-link]
+
+# Java Stream API
+
+Bazirano na predavanjima Dr. Venkat Subramaniam, prosirio i adaptirao
+Branko Bavrljic.
+
+### Kako korisiti:
+
+Jednom kada otvorite kod putem razvojnog okruzenja krenite od klase
+`Main.java` iz `src` direktorijuma i pratite komentare. Kod prati
+predavanje i podeljen je u logicke celine u koje lako mozete da odete
+putem `Ctrl+LeftMouseClick` u vecini okruzenja (`Jump to Definition`
+funkcionalnost)
+
+Projekat se moze pokrenuti sa komandne linije pozivanjem:
+```
+$ mkdir out && javac -sourcepath ./src -d ./out ./src/Main.java && java -cp ./out Main
+```
+ali nije predvidjen da se tako koristi.
+
+### Predavanja
+
+- https://www.youtube.com/watch?v=rVfRDLIw_Zw
+- https://www.youtube.com/watch?v=2mKtdx4ykDU
+
+Ova dva predavanja su skoro ista, ali ima korsinih razlika pogotov pred
+kraj. Stoga je preporuka da uz prolazenje kroz prilozeni kod pogledate
+oba predavanja zarad potpunije price. Ako vam i dalje bude malo tu je i:
+
+- https://www.youtube.com/watch?v=1OpAgZvYXLQ
+
+gde Dr. Venkat prica detaljnije i o samim Lambdama u Javi.
+
+### Feedback
+
+Za ispravke, zelje molim koristite github issues samog repoa:
+[https://github.com/bbavrljic/java-stream-demo/issues]
 
 
-Teme:
-- Prva vidljiva promena u Javi 8: lambde
-- Prava snaga u Javi 8: Stream
-- Sta radi za nas?
- - odvaja sta od kako
- - prirodno funkcionalno
- - fokus na celinu umesto na delove
-- Hajde da probamo
- - Primer: dohvati, velikim slovima, imena svih zena starijih od 18 godina
- - imperativan nacin
- - funkcionalan, pomocu Streamova
-- Sta su zapravo?
- - apstrakcija
- - bez mutacija
- - pregled transformacije podataka
- - lanac
-- Kako ih koristimo?
- - uzdignemo na visi nivo (sa konkretnog an stream)
- - jasemo stream
- - sastavljamo operacije
- - spustamo nazad na konrkretno
-- Streamovi koriste sastavljanje funkcija (function composition)
-- ponasanje bez stanja
-- ciste funkcije
-- Alatke (specializovane funkcije)
- - filter - stampaj sve muskarce
- - map - stampaj sva imena
- - reduce
-  - uopsteni reduce - zbir godina svih osoba
-  - specializovani
-   - sum
-   - max - najstariji
-   - min - najmladji
-   - count - maloletni
-Osobine: sized, ordered, distinct, sorted
- - zavisi od izvora
- - zavisi od operacija
-- uzdigni, transformisi, spusti
-- pazljivo spustaj
-- pogresan nacin - lista svih odraslih osoba velikim slovima
-- ispravan nacin -  reduce vs collect (fold vs aggregate)
- - list
-  - benefiti
-  - pojednostavljanje
- - set
- - map
- - groupingBy
-- sortiranje pomocu comparatora
- - na ruke
- - comparing
- - thenComparing
-- Efikasnost?
-- Medju operacije i terminalne operacije
-- Stapanje i lenjo izvrsavanje
-- Beskonacni streamovi
+### Licenca
 
+[![License: CC BY-NC-SA 4.0][cc-official-logo]][licence-link]
+Attribution-NonCommmercial-ShareAlike 4.0 International
+
+[licence-link]: https://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-official-logo]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-shields-logo]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
