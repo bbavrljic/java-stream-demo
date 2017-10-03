@@ -1,5 +1,7 @@
+import demo.CollectDemo;
 import demo.FilterMapDemo;
 import demo.Koncizno;
+import demo.ReduceDemo;
 import demo.helpers.Osoba;
 import demo.helpers.Pol;
 
@@ -24,7 +26,12 @@ public class Main {
      * Cao, dobrodosao u Stream API prakticni tutorial. :)
      * Sve pocinje odavde, tako da obrati paznju.
      *
-     * TODO dodati uputstva
+     * - Najpre se dohvata lista osoba koju cemo korisiti u svim buducim demonstracijama
+     * - Demonstracije su podeljene po klasama, preporucuje se da drzite odkomentarisanu
+     *   samo jednu od demonstracija - onu koju trenutno prelazite
+     * - Demonstracije su predstavljaju zaokruzene celine iza kojih sledi rezime.
+     *
+     * Have fun!
      */
     public static void main(String[] args) {
         List<Osoba> osobe = stvoriOsobe();
@@ -62,14 +69,25 @@ public class Main {
          *   ali broj elemenata ostaje isti
         /**/
 
+
         // Glavna nardeba za racunanje statistike:
-//        ReduceDemo.run(osobe);
+        ReduceDemo.run(osobe);
+
+        /* Da rezimiramo:
+         * - reduce je fold operacija
+         * -- stoga najkorisnija u radu sa primitivnim tipovima i za statistiku
+         * - reduce specializacije su sum, min, max, count, average
+         * -- mogu se pozvati iskljucivo nad streamovima brojeva
+         * -- da bi to naznacili, koristimo `mapToInt` ili `mapToDouble` ili `mapToLong` u zavisnosti sa cime radimo
+        /**/
+
+
+        // Glavna naredba za agregacije, i kako se razlikuje od reduce
+//        CollectDemo.run(osobe);
 
         // Pogresno vs ispravno
 //        PogresnoIspravno.run(osobe);
 
-        // Sta je collect, sta moze, i kako se razlikuje od reduce
-//        CollectDemo.run(osobe);
 
         // Sortiranje
 //        SortDemo.run(osobe);

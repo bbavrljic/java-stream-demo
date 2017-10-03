@@ -10,6 +10,15 @@ import static java.util.stream.Collectors.toList;
 public class Koncizno {
 
     public static void run(List<Osoba> osobe) {
+        /* U neku ruku cini se kao da su lambde uvedene u Javu samo da bi se lako radilo sa streamovima.
+         * Stremovi nas neverevotno osnazuju pri obradi kolekcija, a neke od bitnih osobina su:
+         * - odvajaju sta radimo od toga kako to radimo
+         * - po prirodi obrade su funkcionalne
+         * - drze fokus na celini umesto na pokretne delove obrade
+         * Pogledajmo na konkretnom zadatku kako tok razmisljanja razlikuje i koje su prednosti:
+        /**/
+
+
         // ========
         // Zadatak:
         // Imena svih punoletnih zena, velikim slovima
