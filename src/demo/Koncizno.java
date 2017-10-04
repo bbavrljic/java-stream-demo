@@ -122,11 +122,7 @@ public class Koncizno {
                 .collect(toList());
 
         System.out.println("Funkcionalan nacin: " + imena3);
-
-        System.out.println(
-            "Sve tri liste imena su jednake (imena == imena2 == imena3)? "
-                + (imena.equals(imena2) && imena2.equals(imena3))
-        );
+        System.out.println("Sve liste imena su jednake? " + (imena.equals(imena2) && imena2.equals(imena3)));
         System.out.println("--");
 
         /* Napomena:

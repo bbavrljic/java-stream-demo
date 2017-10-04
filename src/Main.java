@@ -61,7 +61,7 @@ public class Main {
         // Glavna dva alata koji su nam na raspolaganju:
         FilterMapDemo.run(osobe);
 
-        /* Da rezimiramo
+        /* Da rezimiramo:
          * Glavna dva alata su filter i stream
          * - Filter opciono menja broj elemenata iskljucivo na manje a u zavisnosti od uslova,
          *   ali tip podataka ostaje isti
@@ -83,7 +83,16 @@ public class Main {
 
 
         // Glavna naredba za agregacije, i kako se razlikuje od reduce
-//        CollectDemo.run(osobe);
+        CollectDemo.run(osobe);
+
+        /* Da rezimiramo:
+         * - collect je operacija agregacije
+         * -- stoga najkorisnija je kada rezultat obrade treba spakovati nazad u kolekciju
+         * - collect zna da koristi specializovane kolektore iz `java.util.stream.Collectors`
+         * -- primeri kolektora: toList, toSet, toMap, groupingBy...
+         * - iako collect i reduce se mogu koristiti na istim mestima, BITNO je da se koristi prava alatka na pravom mestu
+        /**/
+
 
         // Pogresno vs ispravno
 //        PogresnoIspravno.run(osobe);
